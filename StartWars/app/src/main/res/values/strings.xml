@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Start Wars</string>
+
+    <string name="release_date">Release date</string>
+    <string name="producer">Producer</string>
+    <string name="director">Director</string>
+    <string name="count">Total %1$d Movies</string>
+    <string name="list_title">Think-it Star Wars</string>
+    <string name="created">Created</string>
+    <string name="edited">Edited</string>
+    <string name="opening_crawl">Opening crawl</string>
+
+</resources>

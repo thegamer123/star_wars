@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.bouraoui.startwars.ui.fragment.splash.SplashScreenFragment"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_moviesListFragment"
+            app:destination="@id/moviesListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moviesListFragment"
+        android:name="com.bouraoui.startwars.ui.fragment.movie.MoviesListFragment"
+        android:label="@string/list_title"
+        tools:layout="@layout/fragment_movies_list">
+        <action
+            android:id="@+id/action_moviesListFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@id/moviesListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.bouraoui.startwars.ui.fragment.movie.MovieDetailFragment"
+        android:label="{movieTitle}"
+        tools:layout="@layout/fragment_movie_detail">
+        <argument
+            android:name="Model"
+            app:argType="string" />
+
+        <argument
+            android:name="movieTitle"
+            app:argType="string" />
+    </fragment>
+</navigation>
