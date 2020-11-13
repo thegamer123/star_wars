@@ -1,6 +1,7 @@
 package com.bouraoui.startwars.di
 
 import com.bouraoui.startwars.MainActivity
+import com.bouraoui.startwars.ui.fragment.movie.MovieDetailFragment
 import com.bouraoui.startwars.ui.fragment.movie.MoviesListFragment
 import dagger.Subcomponent
 
@@ -20,5 +21,6 @@ interface MovieComponent {
     // Classes that can be injected by this Component
     fun inject(activity: MainActivity)
     fun inject(fragment: MoviesListFragment)
+    fun inject(fragment: MovieDetailFragment)
 
 }

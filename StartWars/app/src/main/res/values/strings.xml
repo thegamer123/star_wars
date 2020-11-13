@@ -9,5 +9,6 @@
     <string name="created">Created</string>
     <string name="edited">Edited</string>
     <string name="opening_crawl">Opening crawl</string>
-
+    <string name="place_holder_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed augue in mauris efficitur vestibulum in at sem. Morbi id arcu quis turpis tempor egestas mattis id arcu. Cras sem ipsum, pharetra quis purus nec, blandit molestie ligula. Mauris dignissim quam in velit aliquam, tincidunt rutrum diam elementum. </string>
+<string name="date_placeholder">1977/05/25</string>
 </resources>

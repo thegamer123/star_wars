@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/shimmerLayout"
+    app:shimmer_clip_to_children="true"
     android:layout_height="match_parent"
     tools:context=".ui.fragment.movie.MovieDetailFragment">
 
@@ -69,10 +71,10 @@
                     android:paddingLeft="9dp"
                     android:textColor="@color/white"
                     android:textSize="13sp"
+                    android:text="@string/date_placeholder"
                     android:visibility="visible"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/releaseDateTV"
-                    tools:text="1977/05/25" />
+                    app:layout_constraintTop_toBottomOf="@+id/releaseDateTV" />
 
             </LinearLayout>
 
@@ -107,6 +109,7 @@
                     android:ellipsize="end"
                     android:gravity="center|left"
                     android:lines="1"
+                    android:text="@string/director"
                     android:textColor="@color/white"
                     android:textSize="13sp"
                     app:layout_constraintRight_toRightOf="parent"
@@ -144,6 +147,7 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginRight="12dp"
                     android:ellipsize="end"
+                    android:text="@string/producer"
                     android:gravity="center|left"
                     android:lines="1"
                     android:textColor="@color/white"
@@ -181,6 +185,7 @@
             android:paddingRight="14dp"
             android:textColor="@color/black"
             android:textSize="13sp"
+            android:text="@string/place_holder_paragraph"
             app:layout_constrainedWidth="false"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -229,6 +234,7 @@
                     android:lines="1"
                     android:textColor="@color/black"
                     android:textSize="14sp"
+                    android:text="@string/date_placeholder"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/releaseDateTV" />
             </LinearLayout>
@@ -264,6 +270,7 @@
                     android:ellipsize="end"
                     android:gravity="center|left"
                     android:lines="1"
+                    android:text="@string/date_placeholder"
                     android:textColor="@color/black"
                     android:textSize="14sp"
                     app:layout_constraintRight_toRightOf="parent"
@@ -277,4 +284,4 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</FrameLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

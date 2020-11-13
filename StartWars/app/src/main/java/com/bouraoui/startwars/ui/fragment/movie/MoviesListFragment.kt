@@ -60,7 +60,7 @@ class MoviesListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         loadAnimation()
         initContent()
-        moviesViewModel.setStateEvent(MoviesViewModel.MainStateEvent.GetMovies)
+        moviesViewModel.setStateEvent(MoviesViewModel.MainStateEvent.GetMovies,null)
     }
 
 

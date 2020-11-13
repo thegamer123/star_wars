@@ -1,5 +1,6 @@
 package com.bouraoui.startwars.data.repository
 
+import com.bouraoui.startwars.data.model.FilmItemModel
 import com.bouraoui.startwars.data.model.FilmModel
 import com.bouraoui.startwars.data.remote.MoviesApi
 import com.bouraoui.startwars.util.DataState
@@ -19,6 +20,17 @@ class MoviesRepository @Inject constructor() {
         try {
             val moviesList = moviesApi.getMoviesList()
             emit(DataState.Success(moviesList.body()))
+        } catch (e: Exception) {
+            emit(DataState.Error(e))
+        }
+    }
+
+    suspend fun getMovieById(movieId: String): Flow<DataState<FilmItemModel?>> = flow {
+        emit(DataState.Loading)
+        delay(1000)
+        try {
+            val movie = moviesApi.getMoviesById(movieId)
+            emit(DataState.Success(movie.body()))
         } catch (e: Exception) {
             emit(DataState.Error(e))
         }
